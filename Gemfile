@@ -15,6 +15,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'cancan'
 gem "bootstrap-sass", "~> 2.1.0.0"
 gem 'haml-rails'
 gem 'jquery-rails'

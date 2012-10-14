@@ -38,6 +38,7 @@ GEM
       railties (>= 3.1)
     bootstrap-sass (2.1.0.0)
     builder (3.0.3)
+    cancan (1.6.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -129,6 +130,7 @@ DEPENDENCIES
   annotate (~> 2.5.0)
   backbone-on-rails
   bootstrap-sass (~> 2.1.0.0)
+  cancan
   coffee-rails (~> 3.2.1)
   haml-rails
   jquery-rails
