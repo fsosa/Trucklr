@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem "bootstrap-sass", "~> 2.1.0.0"
 gem "pg", "~> 0.14.1"
 
 group :development do
@@ -16,6 +15,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "bootstrap-sass", "~> 2.1.0.0"
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
