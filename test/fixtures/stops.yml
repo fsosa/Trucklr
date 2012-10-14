@@ -2,16 +2,18 @@
 
 one:
   truck_id: 1
-  start_time: 2012-10-14 00:17:16
-  end_time: 2012-10-14 00:17:16
-  coordinates: 
+  start_time: 2012-10-14 00:30:36
+  end_time: 2012-10-14 00:30:36
+  latitude: 1.5
+  longitude: 1.5
   location: MyString
   tweet_text: MyString
 
 two:
   truck_id: 1
-  start_time: 2012-10-14 00:17:16
-  end_time: 2012-10-14 00:17:16
-  coordinates: 
+  start_time: 2012-10-14 00:30:36
+  end_time: 2012-10-14 00:30:36
+  latitude: 1.5
+  longitude: 1.5
   location: MyString
   tweet_text: MyString

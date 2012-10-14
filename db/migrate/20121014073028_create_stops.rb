@@ -1,10 +1,11 @@
-class CreateEvents < ActiveRecord::Migration
+class CreateStops < ActiveRecord::Migration
   def change
-    create_table :events do |t|
+    create_table :stops do |t|
       t.integer :truck_id
       t.timestamp :start_time
       t.timestamp :end_time
-      t.column :coordinates, :point
+      t.float :latitude
+      t.float :longitude
       t.string :location
       t.string :tweet_text
 
