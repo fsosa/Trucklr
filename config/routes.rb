@@ -1,5 +1,7 @@
 Trucklr::Application.routes.draw do
 
+  devise_for :trucks
+
   scope 'api' do
     scope 'v1' do
       resources :stops, :only => [:create, :show, :update, :index]

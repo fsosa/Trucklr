@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem "pg", "~> 0.14.1"
+gem 'devise'
 
 group :development do
   gem "annotate", "~> 2.5.0"
