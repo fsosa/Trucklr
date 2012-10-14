@@ -1,4 +1,15 @@
 Trucklr::Application.routes.draw do
+
+  scope 'api' do
+    scope 'v1' do
+      resources :stops, :only => [:create, :show, :update, :index]
+      resources :trucks, :only => [:create, :show, :update, :index]
+    end
+  end
+
+  root :to => 'home#index'
+  match '*path', to: 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
