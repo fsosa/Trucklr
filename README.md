@@ -1,6 +1,7 @@
 ==TRUCKLR
 
 #Setup
+
 1. Bundle install
 2. Create the trucklr PG role with
 	`psql`
