@@ -2,7 +2,9 @@ class AddDeviseToTrucks < ActiveRecord::Migration
   def self.up
     change_table(:trucks) do |t|
       ## Database authenticatable
-      t.string :email,              :null => false, :default => ""
+      if !column_exists?(:trucks, :email)
+        t.string :email,              :null => false, :default => ""
+      end
       t.string :encrypted_password, :null => false, :default => ""
 
       ## Recoverable

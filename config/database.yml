@@ -15,10 +15,4 @@ test:
   pool: 5
   username: trucklr
   password:
-
-production:
-  adapter: postgresql
-  database: trucklr
-  pool: 5
-  username: trucklr
-  password:
+  host: localhost

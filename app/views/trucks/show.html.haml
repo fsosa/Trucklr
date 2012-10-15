@@ -1,0 +1,11 @@
+.row
+	.span8.well
+		%h2= @truck.name
+		= link_to 'Edit your profile', edit_truck_path(@truck) if (@truck == current_truck)
+.row
+	.span6
+		= @truck.description
+	.span6
+		= link_to 'Add a new stop!', '#', :class => 'span3 btn btn-success'
+		- @truck.stops.upcoming do |stop|
+			= stop.location
