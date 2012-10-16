@@ -1,18 +1,20 @@
 Trucklr::Application.routes.draw do
 
-  devise_for :trucks, :controllers => { :omniauth_callbacks => "trucks/omniauth_callbacks" }
+  devise_for :principals, :controllers => { :omniauth_callbacks => "principals/omniauth_callbacks" }
   #for now we are just doing things server-side, soon we will switch to a pure API though.
   # scope 'api' do
     # scope 'v1' do
       resources :stops#, :only => [:create, :show, :update, :index]
-      resources :trucks#, :only => [:create, :show, :update, :index]
+      resources :trucks do
+        collection do
+          get 'me'
+        end
+      end
     # end
   # end
 
-  authenticated :truck do
-    root :to => 'trucks#me'
-  end
   root :to => 'home#index'
+  
   # match '*path', to: 'home#index'
 
   # The priority is based upon order of creation:

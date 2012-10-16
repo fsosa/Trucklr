@@ -3,6 +3,7 @@ class TrucksController < ApplicationController
 
   def me
     @truck = current_truck
+    @is_owner = true
     render 'show'
   end
 
@@ -14,6 +15,7 @@ class TrucksController < ApplicationController
   # GET /trucks/1
   # GET /trucks/1.json
   def show
+    @is_owner = (@truck == current_truck)
   end
 
   # GET /trucks/new

@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121015064617) do
+ActiveRecord::Schema.define(:version => 20121016022527) do
+
+  create_table "principals", :force => true do |t|
+    t.string   "email"
+    t.string   "encrypted_password",        :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",             :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "twitter_auth_token"
+    t.string   "twitter_auth_token_secret"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  add_index "principals", ["email"], :name => "index_principals_on_email", :unique => true
+  add_index "principals", ["reset_password_token"], :name => "index_principals_on_reset_password_token", :unique => true
 
   create_table "stops", :force => true do |t|
     t.integer  "truck_id"
@@ -26,27 +48,11 @@ ActiveRecord::Schema.define(:version => 20121015064617) do
   end
 
   create_table "trucks", :force => true do |t|
-    t.string   "email"
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
-    t.string   "encrypted_password",        :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",             :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "twitter_auth_token"
-    t.string   "twitter_auth_token_secret"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "principal_id"
   end
-
-  add_index "trucks", ["email"], :name => "index_trucks_on_email", :unique => true
-  add_index "trucks", ["reset_password_token"], :name => "index_trucks_on_reset_password_token", :unique => true
 
 end
