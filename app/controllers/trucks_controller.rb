@@ -3,8 +3,12 @@ class TrucksController < ApplicationController
 
   def me
     @truck = current_truck
+    redirect_to root_path unless @truck
     @is_owner = true
-    render 'show'
+    respond_to do |format|
+        format.json { render :json => @truck.to_json, :status => 200 }
+        format.html { render 'show' }
+      end
   end
 
   # GET /trucks

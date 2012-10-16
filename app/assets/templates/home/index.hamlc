@@ -1,0 +1,8 @@
+%h2 Welcome to Trucklr!
+	%h3 Are you a food truck?
+	%a.btn.btn-large.btn-info{:href => 'auth/twitter'}
+		Sign in with Twitter
+
+	%h3 Otherwise,
+	%a.btn.btn-large.btn-info#show-map-button
+		Go to the Map

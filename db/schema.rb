@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121016022527) do
+ActiveRecord::Schema.define(:version => 20121016080300) do
 
   create_table "principals", :force => true do |t|
     t.string   "email"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20121016022527) do
     t.string   "twitter_auth_token_secret"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.string   "authentication_token"
   end
 
   add_index "principals", ["email"], :name => "index_principals_on_email", :unique => true

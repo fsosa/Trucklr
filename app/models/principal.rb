@@ -3,9 +3,10 @@ class Principal < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :omniauthable
+  :token_authenticatable,
+  :rememberable, :trackable, :omniauthable
 
-  attr_accessible :twitter_auth_token, :twitter_auth_token_secret, :provider, :email, :password, :uid
+  attr_accessible :twitter_auth_token, :twitter_auth_token_secret, :provider, :email, :password, :uid, :authentication_token
 
   has_one :truck
 
@@ -23,6 +24,7 @@ class Principal < ActiveRecord::Base
   			uid:auth.uid,
   			email:auth.info.email,
   			password:Devise.friendly_token[0,20],
+        authentication_token:Devise.friendly_token[0,20],
   			twitter_auth_token:(auth.credentials.token rescue nil),
   			twitter_auth_token_secret:(auth.credentials.secret rescue nil)
 		)
