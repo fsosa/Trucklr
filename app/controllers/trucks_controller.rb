@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
   load_and_authorize_resource
 
-  def me
+  def profile
     @truck = current_truck
     redirect_to root_path unless @truck
     @is_owner = true
