@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  respond_to :json, :html
 
   rescue_from CanCan::AccessDenied do |exception|
     if request.format == :html

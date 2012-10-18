@@ -10,7 +10,6 @@ class Trucklr.Routers.Main extends Backbone.Router
 		@container = $('#main-container')
 
 	home: ->
-#		@collection.fetch()
 		view = new Trucklr.Views.HomeIndex()
 		@container.html(view.render().el)
 
@@ -19,7 +18,7 @@ class Trucklr.Routers.Main extends Backbone.Router
 
 	profile: ->
 		@truck = new Trucklr.Models.Truck
-		@truck.urlRoot = '/trucks/me'
+		@truck.urlRoot = '/api/trucks/profile'
 		@truck.fetch()
 		view = new Trucklr.Views.TruckShow(model: @truck, is_owner: true)
 		view.is_owner = true

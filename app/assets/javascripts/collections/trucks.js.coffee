@@ -1,3 +1,3 @@
 class Trucklr.Collections.Trucks extends Backbone.Collection
-
-  model: Trucklr.Models.Truck
+	baseUrl: 'api/trucks'
+	model: Trucklr.Models.Truck

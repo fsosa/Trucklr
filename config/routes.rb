@@ -1,3 +1,5 @@
+require 'api_constraints'
+
 Trucklr::Application.routes.draw do
 
   devise_for :principals, :controllers => { :omniauth_callbacks => "principals/omniauth_callbacks" }, :path => ''
@@ -16,12 +18,11 @@ Trucklr::Application.routes.draw do
           get 'profile'
         end
 
-        resources :stops, :only => [:index, :create, :show, :update, :destroy]
-
       end
     end
   end
   
+  root :to => 'home#index'
   match '*path', to: 'home#index'
 
 end

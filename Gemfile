@@ -22,12 +22,12 @@ gem "bootstrap-sass", "~> 2.1.0.0"
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
-gem 'rabl-rails'
+gem 'rabl'
 gem 'omniauth'
 gem 'oauth2'
 gem 'omniauth-twitter'
 gem 'twitter'
-
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

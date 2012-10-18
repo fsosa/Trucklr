@@ -7,5 +7,7 @@ class Trucklr.Views.TruckShow extends Backbone.View
 		@is_owner = false
 
 	render: ->
+		console.log 'RENDERING'
+		console.log @model
 		$(@el).html(@template(truck: @model, is_owner: @is_owner))
 		this
