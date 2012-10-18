@@ -9,10 +9,9 @@
   <%= javascript_include_tag "application" %>
   <% if current_principal %>
     <script type="text/javascript">
-      $(document).ajaxSend(function(e, xhr, options) 
-{
-    xhr.setRequestHeader("authentication_token", "<%= current_principal.authentication_token %>");
-});
+      $(function() {
+        Trucklr.login("<%= current_principal.authentication_token %>");
+      })
     </script>
     <% end %>
   <%= csrf_meta_tags %>
