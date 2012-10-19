@@ -19,7 +19,6 @@ window.Trucklr =
 		@auth_token = auth_token
 		$(document).ajaxSend (e, xhr, options) ->
 			xhr.setRequestHeader("authentication_token", auth_token)
-		Trucklr.router.navigate('/profile', trigger: true)
 
 
 	logout: () ->

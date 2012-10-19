@@ -1,0 +1,3 @@
+%ul.stops
+-for stop in @stops.models
+	%li.stop= stop.get('stop').start_time

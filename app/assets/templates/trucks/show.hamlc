@@ -18,12 +18,7 @@
 
 	.span6
 		%h3= "#{@truck.get('name')}'s Upcoming Stops"
-		- if !@truck.stops?
-			%div
-				-if @is_owner
-					%em You haven't scheduled any stops yet.
-				-else
-					%em= "#{@truck.get('name')} hasn't scheduled any stops yet."
+		%ul#stops_list
 		- if @is_owner
 			%a.btn.btn-success.btn-large{:href => '#'}
 				Add a new stop!
