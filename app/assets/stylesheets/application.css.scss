@@ -10,7 +10,23 @@
  *
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
+@import "bootstrap-datepicker";
+@import "timepicker";
+
  #main-container {
  	padding-top:20px;
  }
+#modal-container {
+	z-index: 20 !important;
+}
+
+.modal-backdrop {
+	z-index: 10 !important;
+}​
+
+.pac-container {
+    z-index: 21 !important;
+}
+
+@import "bootstrap-responsive";

@@ -19,8 +19,10 @@ end
 
 gem 'cancan'
 gem "bootstrap-sass", "~> 2.1.0.0"
+gem 'bootstrap-datepicker-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'momentjs-rails'
 gem 'backbone-on-rails'
 gem 'rabl'
 gem 'omniauth'

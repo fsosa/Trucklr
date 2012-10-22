@@ -1,0 +1,15 @@
+%form.form-inline
+	.row
+		.span6
+			%label{:for => "location"} Location:
+			%input.span6.autocomplete{:type => "text", :name => "location"}
+	%br
+	.row
+		.span6
+			- console.log moment()
+			%label{:for => "date"} Date:
+			%input.span2.datepicker{:type => "date", :name => "date" }
+			%label.control-label{:for => "start_time"} From:
+			%input.span1.timepicker{:type => "time", :name => "start_time"}
+			%label.control-label{:for => "end_time"} To:
+			%input.span1.timepicker{:type => "time", :name => "end_time" }

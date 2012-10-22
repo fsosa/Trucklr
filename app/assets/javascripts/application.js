@@ -10,13 +10,19 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+
+//= require modernizr.custom
+//= require moment
 //= require hamlcoffee
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require underscore
 //= require backbone
 //= require backbone-relational
+//= require Backbone.ModelBinder
 //= require trucklr
 //= require_tree ../templates
 //= require_tree ./models

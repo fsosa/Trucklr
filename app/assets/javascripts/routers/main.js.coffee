@@ -9,7 +9,7 @@ class Trucklr.Routers.Main extends Backbone.Router
 		@container = $('#main-container')
 
 	home: ->
-		if !Trucklr.is_logged_in()
+		if Trucklr.is_logged_in()
 			@navigate('/profile', trigger: true)
 		else
 			view = new Trucklr.Views.HomeIndex()

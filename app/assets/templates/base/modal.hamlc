@@ -1,0 +1,12 @@
+.modal-header
+	%button{:type => "button", :class => "close", :data => {:dismiss => 'modal'}}
+		&times;
+	%h3
+		= @title
+.modal-body
+	!= @content
+.modal-footer
+	%a.btn{:data => {:dismiss => 'modal'}}
+		Cancel
+	%a.btn.btn-success#save-button{:href => '#'}
+		= @saveLabel

@@ -29,7 +29,7 @@ window.Trucklr =
 
 
 	is_logged_in: () ->
-		@auth_token == null
+		@auth_token?
 
 $(document).ready ->
 	Trucklr.init()

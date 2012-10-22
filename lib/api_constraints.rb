@@ -6,7 +6,7 @@ class ApiConstraints
   end
 
   def header(version)
-  	"application/vnd.example.v#{version}"
+  	"application/vnd.trucklr.v#{version}"
   end
 
   def matches?(req)

@@ -20,5 +20,5 @@
 		%h3= "#{@truck.get('name')}'s Upcoming Stops"
 		%ul#stops_list
 		- if @is_owner
-			%a.btn.btn-success.btn-large{:href => '#'}
+			%a.btn.btn-success.btn-large#new-stop{:href => '#'}
 				Add a new stop!
