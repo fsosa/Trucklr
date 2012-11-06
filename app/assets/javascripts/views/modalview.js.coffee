@@ -14,3 +14,7 @@ class Trucklr.Views.ModalView extends Backbone.View
 
 	saveClicked: (event) ->
 		throw 'not implemented'
+
+	close: ->
+		$('#modal-container').modal('hide')
+		@remove()

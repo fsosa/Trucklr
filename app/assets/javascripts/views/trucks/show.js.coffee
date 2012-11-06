@@ -6,6 +6,7 @@ class Trucklr.Views.TruckShow extends Backbone.View
 		'click #new-stop' : 'newStop'
 
 	initialize: () ->
+		@model.on('add:stops', @renderStops, this)
 		@model.on('change', @render, this)
 		@stopsView = new Trucklr.Views.StopsCollectionView
 			model: @model.get('stops')
@@ -22,5 +23,9 @@ class Trucklr.Views.TruckShow extends Backbone.View
 
 	newStop: (event) ->
 		event.preventDefault()
-		stop = new Trucklr.Models.Stop()
+		stop = new Trucklr.Models.Stop
+			truck: @model
 		new Trucklr.Views.NewStop(model: stop).render()
+
+	renderTest: (event) ->
+		console.log(event)

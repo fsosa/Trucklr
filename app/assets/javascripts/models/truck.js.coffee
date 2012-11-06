@@ -4,10 +4,7 @@ class Trucklr.Models.Truck extends Backbone.RelationalModel
 	relations: [
 		type: Backbone.HasMany,
 		key: 'stops',
-		relatedModel: Trucklr.Models.Stop,
-		reverseRelation:
-			key: 'truck',
-			includeInJSON: 'id'
+		relatedModel: 'Trucklr.Models.Stop'
 	]
 
 Trucklr.Models.Truck.setup()

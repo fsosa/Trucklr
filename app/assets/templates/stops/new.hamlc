@@ -1,15 +1,27 @@
 %form.form-inline
 	.row
 		.span6
-			%label{:for => "location"} Location:
-			%input.span6.autocomplete{:type => "text", :name => "location"}
+			%label{:for => "formatted_address"} Location:
+			%input.span6.autocomplete{:type => "text", :name => "formatted_address"}
 	%br
 	.row
 		.span6
-			- console.log moment()
 			%label{:for => "date"} Date:
-			%input.span2.datepicker{:type => "date", :name => "date" }
-			%label.control-label{:for => "start_time"} From:
-			%input.span1.timepicker{:type => "time", :name => "start_time"}
-			%label.control-label{:for => "end_time"} To:
-			%input.span1.timepicker{:type => "time", :name => "end_time" }
+			-if Modernizr.touch
+				%input.span2.datepicker.starttime.endtime{:type => "date", :name => "date"}
+			-else
+				%input.span2.datepicker.starttime.endtime{:type => "text", :name => "date"}
+			-if Modernizr.touch
+				%label.control-label{:for => "start_time"} From:
+				%input.span1.timepicker.starttime{:type => "time", :name => "start_time"}
+				%label.control-label{:for => "end_time"} To:
+				%input.span1.timepicker.endtime{:type => "time", :name => "end_time" }
+			-else
+				%label.control-label{:for => "start_time"} From:
+				%input.span1.timepicker.starttime{:type => "text", :name => "start_time"}
+				%label.control-label{:for => "end_time"} To:
+				%input.span1.timepicker.endtime{:type => "text", :name => "end_time" }
+			
+			%input{:type => "hidden", :name => "location"}
+			%input{:type => "hidden", :name => "latitude"}
+			%input{:type => "hidden", :name => "longitude"}

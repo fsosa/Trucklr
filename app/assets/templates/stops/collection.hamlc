@@ -1,3 +1,6 @@
 %ul.stops
 -for stop in @stops.models
-	%li.stop= stop.get('stop').start_time
+	%li.stop
+		=stop.get('start_time')
+		=stop.get('end_time')
+		=stop.get('location')

@@ -1,1 +1,1 @@
-attributes :end_time, :latitude, :location, :longitude, :start_time, :truck_id, :tweet_text
+attributes :end_time, :latitude, :location, :longitude, :start_time, :truck_id, :tweet_text, :errors
